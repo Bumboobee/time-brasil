@@ -1,5 +1,14 @@
+import Section from "./components/section";
+import GlobalStyle from "./styles/global";
+
 function App() {
-  return <h1>Hello World!</h1>;
+  return (
+    <>
+      <GlobalStyle />
+
+      <Section />
+    </>
+  );
 }
 
 export default App;

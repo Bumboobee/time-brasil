@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "js-confetti": "^0.12.0",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "styled-components": "^6.1.12"
+    "styled-components": "^6.1.12",
+    "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
