@@ -55,15 +55,33 @@ const Section = () => {
     });
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      const direction = event.key === "ArrowDown" ? 1 : -1;
+
+      setCurrentAthlete((prev) => {
+        const currentIndex = data.indexOf(prev);
+        const newIndex = currentIndex + direction;
+
+        if (newIndex >= 0 && newIndex < data.length) {
+          return data[newIndex];
+        }
+        return prev;
+      });
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("wheel", handleScroll);
     window.addEventListener("touchstart", handleTouchStart);
     window.addEventListener("touchend", handleTouchEnd);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchend", handleTouchEnd);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [touchStartY]);
 
