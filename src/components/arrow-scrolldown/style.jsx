@@ -17,7 +17,6 @@ export const SingleArrow = styled.span`
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  transform: rotate(45deg);
   border-right: 2px solid ${colors.base.white};
   border-bottom: 2px solid ${colors.base.white};
   margin: 0 0 3px 5px;
@@ -26,18 +25,24 @@ export const SingleArrow = styled.span`
 
   &:nth-child(1) {
     margin-top: 6px;
+    border-right: 2px solid ${colors.green.green_300};
+    border-bottom: 2px solid ${colors.green.green_300};
     -webkit-animation-delay: 0.1s;
     -moz-animation-delay: 0.1s;
     -webkit-animation-direction: alternate;
   }
 
   &:nth-child(2) {
+    border-right: 2px solid ${colors.yellow.yellow_300};
+    border-bottom: 2px solid ${colors.yellow.yellow_300};
     -webkit-animation-delay: 0.2s;
     -moz-animation-delay: 0.2s;
     -webkit-animation-direction: alternate;
   }
 
   &:nth-child(3) {
+    border-right: 2px solid ${colors.blue.blue_300};
+    border-bottom: 2px solid ${colors.blue.blue_300};;
     -webkit-animation-delay: 0.3s;
     -moz-animation-dekay: 0.3s;
     -webkit-animation-direction: alternate;
