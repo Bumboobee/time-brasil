@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import JSConfetti from "js-confetti";
+import axios from "axios";
 
 import * as Style from "./style";
 import Medals from "../medals";
 import Border from "../border";
 import SocialMedia from "../social-media";
 import TimeBrazil from "/assets/time-brazil.jpg";
+import ArrowScroollDown from "../arrow-scrolldown";
 
 import { data } from "./../../data";
 const jsConfetti = new JSConfetti();
@@ -13,27 +15,51 @@ const jsConfetti = new JSConfetti();
 const Section = () => {
   const [currentAthlete, setCurrentAthlete] = useState(data[0]);
   const [touchStartY, setTouchStartY] = useState(null);
+  const [brasilData, setBrasilData] = useState([]);
+  const [isLastAthlete, setIsLastAthlete] = useState(data.length === 1);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://apis.codante.io/olympic-games/countries"
+        );
+        setBrasilData(
+          response.data.data.find((country) => country.id === "BRA")
+        );
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const splitDescriptionIntoParagraphs = (description) => {
     return description.split("\n").map((text, index) => (
       <React.Fragment key={index}>
-        {index > 0 && <br />}
+        {index > 0}
         <Style.Paragraph>{text}</Style.Paragraph>
       </React.Fragment>
     ));
   };
 
-  const handleScroll = (event) => {
-    const direction = event.deltaY > 0 ? 1 : -1;
+  const updateAthlete = (direction) => {
     setCurrentAthlete((prev) => {
       const currentIndex = data.indexOf(prev);
       const newIndex = currentIndex + direction;
 
       if (newIndex >= 0 && newIndex < data.length) {
+        setIsLastAthlete(newIndex === data.length - 1);
         return data[newIndex];
       }
       return prev;
     });
+  };
+
+  const handleScroll = (event) => {
+    const direction = event.deltaY > 0 ? 1 : -1;
+    updateAthlete(direction);
   };
 
   const handleTouchStart = (event) => {
@@ -43,31 +69,13 @@ const Section = () => {
   const handleTouchEnd = (event) => {
     const touchEndY = event.changedTouches[0].clientY;
     const direction = touchStartY > touchEndY ? 1 : -1;
-
-    setCurrentAthlete((prev) => {
-      const currentIndex = data.indexOf(prev);
-      const newIndex = currentIndex + direction;
-
-      if (newIndex >= 0 && newIndex < data.length) {
-        return data[newIndex];
-      }
-      return prev;
-    });
+    updateAthlete(direction);
   };
 
   const handleKeyDown = (event) => {
     if (event.key === "ArrowDown" || event.key === "ArrowUp") {
       const direction = event.key === "ArrowDown" ? 1 : -1;
-
-      setCurrentAthlete((prev) => {
-        const currentIndex = data.indexOf(prev);
-        const newIndex = currentIndex + direction;
-
-        if (newIndex >= 0 && newIndex < data.length) {
-          return data[newIndex];
-        }
-        return prev;
-      });
+      updateAthlete(direction);
     }
   };
 
@@ -102,56 +110,67 @@ const Section = () => {
   }, [currentAthlete]);
 
   return (
-    <Style.GlobalSection>
-      <Style.Aside
-        primary={currentAthlete.images[0]}
-        secondary={currentAthlete.images[1]}
-        quinary={currentAthlete.images[4]}
-      >
-        <Style.Credits>
-          <img src={TimeBrazil} alt="" width={32} />
-          <a href="https://www.instagram.com/timebrasil/">@Time Brasil</a>
-        </Style.Credits>
-        <Medals medals={currentAthlete.medals} />
+    <>
+      <Style.GlobalSection>
+        <Style.Aside
+          primary={currentAthlete.images[0]}
+          secondary={currentAthlete.images[1]}
+          quinary={currentAthlete.images[4]}
+        >
+          <Style.Credits>
+            <img src={TimeBrazil} alt="Time Brasil" width={32} />
+            <a href="https://www.instagram.com/timebrasil/">@Time Brasil</a>
+          </Style.Credits>
+          <Medals medals={currentAthlete.medals} />
 
-        <Style.ContentWraper>
-          <Border />
+          <Style.ContentWraper>
+            <Border />
 
-          <Style.Preview />
+            <Style.Preview />
 
-          <Style.Preview />
-        </Style.ContentWraper>
-      </Style.Aside>
+            <Style.Preview />
+          </Style.ContentWraper>
+        </Style.Aside>
 
-      <Style.Aside
-        tertiary={currentAthlete.images[2]}
-        quartenary={currentAthlete.images[3]}
-        sextary={currentAthlete.images[5]}
-      >
-        <Style.ContentWraper>
-          <Border />
+        <Style.Aside
+          tertiary={currentAthlete.images[2]}
+          quartenary={currentAthlete.images[3]}
+          sextary={currentAthlete.images[5]}
+        >
+          <Style.ContentWraper>
+            <Border />
 
-          <Style.Preview />
-          <Style.Preview />
-          <Style.Preview />
+            <Style.Preview />
+            <Style.Preview />
+            <Style.Preview />
 
-          <span>{/* Yellow noise */}</span>
+            <span>{/* Yellow noise */}</span>
 
-          <div>
             <div>
               <div>
-                <Style.Title>{currentAthlete.title}</Style.Title>
-                {splitDescriptionIntoParagraphs(currentAthlete.description)}
+                <div>
+                  <Style.Title>{currentAthlete.title}</Style.Title>
+                  {splitDescriptionIntoParagraphs(currentAthlete.description)}
+                </div>
+
+                <SocialMedia socialMediaLink={currentAthlete.socialMedia} />
               </div>
 
-              <SocialMedia socialMediaLink={currentAthlete.socialMedia} />
+              <div>{/* Blue noise */}</div>
             </div>
+          </Style.ContentWraper>
 
-            <div>{/* Blue noise */}</div>
-          </div>
-        </Style.ContentWraper>
-      </Style.Aside>
-    </Style.GlobalSection>
+          <span>
+            <img src={brasilData.flag_url} alt={brasilData.name} />
+            <span>
+              <span>{brasilData.total_medals}</span> <span>Medalhas</span>{" "}
+            </span>
+          </span>
+        </Style.Aside>
+      </Style.GlobalSection>
+
+      {!isLastAthlete && <ArrowScroollDown />}
+    </>
   );
 };
 

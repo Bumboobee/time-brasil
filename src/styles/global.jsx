@@ -30,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
   body, html  {
     height: 100%;
     overflow: hidden;
+    user-select: none;
   }
 
   section, aside, nav, div, button, span, p, h1, h2, h3, h4, h5, h6, a, img, input, textarea, select, option, label, form, ul, li, ol, img {

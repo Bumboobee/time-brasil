@@ -8,7 +8,7 @@ export const SocialMediaContainer = styled.div`
   align-items: center;
   justify-content: end;
   gap: ${spacing.small};
-
+  
   & > img {
     width: 26px;
   }
@@ -16,6 +16,7 @@ export const SocialMediaContainer = styled.div`
   & > span {
     z-index: 20;
     font-size: ${fontSizes.heading_6};
+    user-select: all;
 
     @media (max-width: ${breakPoints.mobile}) {
       font-size: ${fontSizes.body};
@@ -27,7 +28,7 @@ export const SocialMediaContainer = styled.div`
       background-position: center;
       font-weight: 600;
       font-family: "Source Sans 3";
-      transition: ease .4s;
+      transition: ease 0.4s;
       font-size: ${fontSizes.caption};
       background-image: url(${YellowNoise});
       padding: ${spacing.xsmall};

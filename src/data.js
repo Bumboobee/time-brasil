@@ -1,5 +1,35 @@
 export const data = [
   {
+    name: "Rebeca Andrade",
+    images: [
+      "/assets/images/brazilians/rebeca/primary.jpg",
+      "/assets/images/brazilians/rebeca/secondary.jpg",
+      "/assets/images/brazilians/rebeca/tertiary.jpg",
+      "/assets/images/brazilians/rebeca/quartenary.jpg",
+      "/assets/images/brazilians/rebeca/quinary.jpg",
+      "/assets/images/brazilians/rebeca/sextary.jpg",
+    ],
+    title: "Se curvem para a rainha Andrade!",
+    description: `Fazendo história, Rebaca Andrade se consagra agora como a maior medalhista olímpica do Brasil! 🥇
+        \n Ela conseguiu 15.100 no primeiro salto na final por aparelhos da Ginástica Artística! Ela já havia conquistado a medalha de prata para o #TimeBrasil no Individual Geral na ginástica artística.
+        \n Na final do Solo, Andrade conquistou a medalha de ouro com nota de 14.666!`,
+    socialMedia: "rebecarandrade",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 1,
+      },
+      {
+        name: "Prata",
+        quantity: 2,
+      },
+      {
+        name: "Bronze",
+        quantity: 1,
+      },
+    ],
+  },
+  {
     name: "Beatriz Souza",
     images: [
       "/assets/images/brazilians/beatriz-souza/primary.jpg",
@@ -22,36 +52,6 @@ export const data = [
       {
         name: "Prata",
         quantity: 0,
-      },
-      {
-        name: "Bronze",
-        quantity: 1,
-      },
-    ],
-  },
-  {
-    name: "Rebeca Andrade",
-    images: [
-      "/assets/images/brazilians/rebeca/primary.jpg",
-      "/assets/images/brazilians/rebeca/secondary.jpg",
-      "/assets/images/brazilians/rebeca/tertiary.jpg",
-      "/assets/images/brazilians/rebeca/quartenary.jpg",
-      "/assets/images/brazilians/rebeca/quinary.jpg",
-      "/assets/images/brazilians/rebeca/sextary.jpg",
-    ],
-    title: "Se curvem para a rainha Andrade!",
-    description: `Fazendo história, Rebaca Andrada se consagra agora como uma das maiores medalhistas olímpicas do Brasil! 🥇
-          \n Rebeca Andrade consegue 15.100 no primeiro Salto na final por aparelhos da Ginástica Artística! É nossa medalhista olímpica!
-          \n Ela já havia conquistado a medalha de prata para o #TimeBrasil no Individual Geral na ginástica artística.`,
-    socialMedia: "rebecarandrade",
-    medals: [
-      {
-        name: "Ouro",
-        quantity: 0,
-      },
-      {
-        name: "Prata",
-        quantity: 2,
       },
       {
         name: "Bronze",

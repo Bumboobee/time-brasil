@@ -10,10 +10,10 @@ import PropTypes from "prop-types";
 
 export const GlobalSection = styled.section`
   display: flex;
+  position: relative;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
   overflow-x: hidden;
   width: 100%;
   height: 100vh;
@@ -22,13 +22,14 @@ export const GlobalSection = styled.section`
 
   @media (max-width: ${breakPoints.tablet}) {
     flex-direction: column;
+    justify-content: flex-start;
     padding: 0 ${spacing.xlarge};
-    gap: ${spacing.xlarge};
+    gap: ${spacing.xxxlarge};
   }
 
   @media (max-width: ${breakPoints.mobile}) {
-    padding: 0 ${spacing.small};
-    gap: 0;
+    gap: ${spacing.xlarge};
+    padding: ${spacing.large} ${spacing.small};
   }
 `;
 
@@ -42,12 +43,54 @@ export const Aside = styled.aside`
     position: relative;
   }
 
+  &:last-child {
+    position: relative;
+
+    & > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 70px;
+      right: -50px;
+      gap: ${spacing.xsmall};
+      transform: rotate(90deg);
+
+      & > img {
+        width: 40px;
+      }
+
+      & > span {
+        font-family: "Hind";
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        padding: ${spacing.xsmall} ${spacing.small};
+        background-image: url(${GreenNoise});
+        font-size: ${fontSizes.caption};
+        color: ${colors.base.white};
+
+        & > span {
+          margin-right: ${spacing.xsmall};
+
+          &:first-child {
+            text-decoration: underline;
+            font-weight: 700;
+            color: ${colors.yellow.yellow_300};
+          }
+        }
+      }
+    }
+  }
   @media (max-width: ${breakPoints.laptop}) {
-    padding: ${spacing.xlarge} 0;
+    padding: 0;
   }
 
-  @media (max-width: ${breakPoints.mobile}) {
-    padding-top: ${spacing.medium};
+  @media (max-width: ${breakPoints.tablet}) {
+    height: calc(85vh / 2);
   }
 
   &:nth-child(1) > div {
@@ -215,8 +258,8 @@ export const ContentWraper = styled.div`
   }
 
   @media (max-width: ${breakPoints.mobile}) {
-    width: 80%;
-    height: 380px !important;
+    width: 70%;
+    height: 100% !important;
   }
 `;
 
@@ -260,6 +303,7 @@ export const Paragraph = styled.p`
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
+  margin-bottom: ${spacing.medium};
   font-size: ${fontSizes.heading_5};
   color: ${colors.blue.blue_300};
 
