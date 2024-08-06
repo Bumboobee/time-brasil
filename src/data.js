@@ -120,20 +120,20 @@ export const data = [
     ],
   },
   {
-    name: "Beatriz Ferreira",
+    name: "Tati Weston-Webb",
     images: [
-      "/assets/images/brazilians/beatriz-ferreira/primary.jpg",
-      "/assets/images/brazilians/beatriz-ferreira/secondary.jpg",
-      "/assets/images/brazilians/beatriz-ferreira/tertiary.jpg",
-      "/assets/images/brazilians/beatriz-ferreira/quartenary.jpg",
-      "/assets/images/brazilians/beatriz-ferreira/quinary.jpg",
-      "/assets/images/brazilians/beatriz-ferreira/sextary.jpg",
+      "/assets/images/brazilians/tati/primary.jpg",
+      "/assets/images/brazilians/tati/secondary.jpg",
+      "/assets/images/brazilians/tati/tertiary.jpg",
+      "/assets/images/brazilians/tati/quartenary.jpg",
+      "/assets/images/brazilians/tati/quinary.jpg",
+      "/assets/images/brazilians/tati/sextary.jpg",
     ],
-    title: "Beatriz Ferreira é bicampeã olímpica!!! ",
-    description: `Beatriz Ferreira é bicampeã olímpica!!!
-          \n Nossa boxeadora garantiu a prata no boxe e continua sendo a maior medalhista brasileira da modalidade!
-          \n "Eu agradeço a todo o #TimeBrasil por acreditar em mim e no meu sonho de conquistar mais uma medalha. Essa é para vocês!", disse Beatriz Ferreira.`,
-    socialMedia: "beatrizferreira60kg",
+    title: "Tati Weston-Webb é prata!",
+    description: `Tati Weston-Webb é prata! 
+          \n A surfista brasileira conquistou a medalha de prata no surfe em #Paris2024! 
+          \n Tatiana Weston-Webb, a dona da 1ª medalha brasileira no surfe feminino nos #JogosOlímpicos! RESPEITA!!`,
+    socialMedia: "tatiwest",
     medals: [
       {
         name: "Ouro",
@@ -176,6 +176,36 @@ export const data = [
       {
         name: "Bronze",
         quantity: 2,
+      },
+    ],
+  },
+  {
+    name: "Beatriz Ferreira",
+    images: [
+      "/assets/images/brazilians/beatriz-ferreira/primary.jpg",
+      "/assets/images/brazilians/beatriz-ferreira/secondary.jpg",
+      "/assets/images/brazilians/beatriz-ferreira/tertiary.jpg",
+      "/assets/images/brazilians/beatriz-ferreira/quartenary.jpg",
+      "/assets/images/brazilians/beatriz-ferreira/quinary.jpg",
+      "/assets/images/brazilians/beatriz-ferreira/sextary.jpg",
+    ],
+    title: "Beatriz Ferreira é bicampeã olímpica!!! ",
+    description: `Beatriz Ferreira é bicampeã olímpica!!!
+          \n Nossa boxeadora garantiu a bronze no boxe e continua sendo a maior medalhista brasileira da modalidade!
+          \n "Eu agradeço a todo o #TimeBrasil por acreditar em mim e no meu sonho de conquistar mais uma medalha. Essa é para vocês!", disse Beatriz Ferreira.`,
+    socialMedia: "beatrizferreira60kg",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 0,
+      },
+      {
+        name: "Prata",
+        quantity: 0,
+      },
+      {
+        name: "Bronze",
+        quantity: 1,
       },
     ],
   },
@@ -250,6 +280,36 @@ export const data = [
     description: `A equipe mista de Judô do Brasil garantiu mais uma medalha em #Paris2024! É bronzêeee para o Brasil!
           \n Beatriz Souza, Rafael Silva, Maria Suelen Altheman, Giovani Ferreira, William Lima e Larissa Pimenta fizeram bonito e garantiram mais uma medalha para o Brasil!`,
     socialMedia: "cbjudo",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 0,
+      },
+      {
+        name: "Prata",
+        quantity: 0,
+      },
+      {
+        name: "Bronze",
+        quantity: 1,
+      },
+    ],
+  },
+  {
+    name: "Gabriel Medina",
+    images: [
+      "/assets/images/brazilians/medina/primary.jpg",
+      "/assets/images/brazilians/medina/secondary.jpg",
+      "/assets/images/brazilians/medina/tertiary.jpg",
+      "/assets/images/brazilians/medina/quartenary.jpg",
+      "/assets/images/brazilians/medina/quinary.jpg",
+      "/assets/images/brazilians/medina/sextary.jpg",
+    ],
+    title: "Tricampeão mundial e agora medalhista olímpico!",
+    description: `Gabriel Medina é bronze! 
+          \n Gigantesco, um dos maiores nomes da história do surfe! Essa medalha é sua, Gabriel! 
+          \n HISTÓRICO! LENDÁRIO! 💚💛`,
+    socialMedia: "gabrielmedina",
     medals: [
       {
         name: "Ouro",
