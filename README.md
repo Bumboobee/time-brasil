@@ -37,6 +37,6 @@ Rebeca Andrade has recently emerged as one of Brazil's greatest medalists. Her o
 Andrade has currently 5 medals in her collection, including 1 gold, 3 silver, and 1 bronze. Her remarkable journey is a testament to the power of hard work and determination, and she is a role model for aspiring athletes around the world.
 
 ### Deployment
-The project is deployed and accessible at: **[Time Brasil](https://brazilian-athletes-medal-tracker.netlify.app/)**
+The project is deployed and accessible at: **[Time Brasil](https://time-brasil.netlify.app/)**
 
 **Let's gooo 🇧🇷🥇🥈🥉**
