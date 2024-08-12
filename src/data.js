@@ -60,6 +60,36 @@ export const data = [
     ],
   },
   {
+    name: "Ana Patrícia e Duda Lisboa",
+    images: [
+      "/assets/images/brazilians/teams/praia/primary.jpg",
+      "/assets/images/brazilians/teams/praia/secondary.jpg",
+      "/assets/images/brazilians/teams/praia/tertiary.jpg",
+      "/assets/images/brazilians/teams/praia/quartenary.jpg",
+      "/assets/images/brazilians/teams/praia/quinary.jpg",
+      "/assets/images/brazilians/teams/praia/sextary.jpg",
+    ],
+    title: "Ana Patrícia e Duda Lisboa são OURO!",
+    description: `Com uma final digna de ouro, muitas enterradas e claro, confusão, Ana Patrícia e Duda Lisboa são campeãs olímpicas! 🥇
+        \n As duas cravaram a bola na areia aos pés da torre Eiffel e garantiram o ouro para o Brasil!
+        \n Ainda rolou desentendimento entre a dupla Canadense, mas elas esqueceram que aqui é Brasssil, Porrrra!`,
+    socialMedia: "patisramos",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 1,
+      },
+      {
+        name: "Prata",
+        quantity: 0,
+      },
+      {
+        name: "Bronze",
+        quantity: 0,
+      },
+    ],
+  },
+  {
     name: "Willian Lima",
     images: [
       "/assets/images/brazilians/willian/primary.jpg",
@@ -146,6 +176,183 @@ export const data = [
       {
         name: "Bronze",
         quantity: 0,
+      },
+    ],
+  },
+  {
+    name: "Isaquias Queiroz",
+    images: [
+      "/assets/images/brazilians/isaquias/primary.jpg",
+      "/assets/images/brazilians/isaquias/secondary.jpg",
+      "/assets/images/brazilians/isaquias/tertiary.jpg",
+      "/assets/images/brazilians/isaquias/quartenary.jpg",
+      "/assets/images/brazilians/isaquias/quinary.jpg",
+      "/assets/images/brazilians/isaquias/sextary.jpg",
+    ],
+    title: "Isaquias Queiroz é prata! ",
+    description: `Isaquias Queiroz é prata! 
+          \n O baiano conquistou a medalha de prata na canoagem de velocidade em #Paris2024! 
+          \n Isaquias Queiroz, o dono de 5 medalhas olímpicas (e as maiores posteriores do Brasil 👀)!`,
+    socialMedia: "isaquias_lx",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 0,
+      },
+      {
+        name: "Prata",
+        quantity: 1,
+      },
+      {
+        name: "Bronze",
+        quantity: 0,
+      },
+    ],
+  },
+  {
+    name: "Seleção Feminina de Futebol",
+    images: [
+      "/assets/images/brazilians/teams/futebol/primary.jpg",
+      "/assets/images/brazilians/teams/futebol/secondary.jpg",
+      "/assets/images/brazilians/teams/futebol/tertiary.jpg",
+      "/assets/images/brazilians/teams/futebol/quartenary.jpg",
+      "/assets/images/brazilians/teams/futebol/quinary.jpg",
+      "/assets/images/brazilians/teams/futebol/sextary.jpg",
+    ],
+    title: "É Prata! 🥉",
+    description: `Nossa seleção feminina conquistou a medalha de Prata na grande final do futebol feminino!
+          \n Nosso time enfrentou os EUA e não deitaram em nenhum momento. G-U-E-R-R-E-I-R-A-S!`,
+    socialMedia: "selecaofemininadefutebol",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 0,
+      },
+      {
+        name: "Prata",
+        quantity: 1,
+      },
+      {
+        name: "Bronze",
+        quantity: 0,
+      },
+    ],
+  },
+  {
+    name: "Equipe de Vôlei Feminino",
+    images: [
+      "/assets/images/brazilians/teams/volei/primary.jpg",
+      "/assets/images/brazilians/teams/volei/secondary.jpg",
+      "/assets/images/brazilians/teams/volei/tertiary.jpg",
+      "/assets/images/brazilians/teams/volei/quartenary.jpg",
+      "/assets/images/brazilians/teams/volei/quinary.jpg",
+      "/assets/images/brazilians/teams/volei/sextary.jpg",
+    ],
+    title: "Garantimos o bronze!",
+    description: `Vencendo a Turquia por 3 sets a 0, o #TimeBrasil garantiu a medalha de bronze no vôlei feminino! 🥉`,
+    socialMedia: "cbvolei",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 0,
+      },
+      {
+        name: "Prata",
+        quantity: 0,
+      },
+      {
+        name: "Bronze",
+        quantity: 1,
+      },
+    ],
+  },
+  {
+    name: "Alison dos Santos",
+    images: [
+      "/assets/images/brazilians/alison/primary.jpg",
+      "/assets/images/brazilians/alison/secondary.jpg",
+      "/assets/images/brazilians/alison/tertiary.jpg",
+      "/assets/images/brazilians/alison/quartenary.jpg",
+      "/assets/images/brazilians/alison/quinary.jpg",
+      "/assets/images/brazilians/alison/sextary.jpg",
+    ],
+    title: "Alison dos Santos é bronze! ",
+    description: `É O PIUUUU! 
+          \n O brasileiro conquistou a medalha de bronze nos 400m com barreiras em #Paris2024! 
+          \n Alison dos Santos, o dono de uma das medalhas mais suadas do #TimeBrasil!`,
+    socialMedia: "alisonsantos01_",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 0,
+      },
+      {
+        name: "Prata",
+        quantity: 0,
+      },
+      {
+        name: "Bronze",
+        quantity: 1,
+      },
+    ],
+  },
+  {
+    name: "Augusto Akio",
+    images: [
+      "/assets/images/brazilians/augusto/primary.jpg",
+      "/assets/images/brazilians/augusto/secondary.jpg",
+      "/assets/images/brazilians/augusto/tertiary.jpg",
+      "/assets/images/brazilians/augusto/quartenary.jpg",
+      "/assets/images/brazilians/augusto/quinary.jpg",
+      "/assets/images/brazilians/augusto/sextary.jpg",
+    ],
+    title: "Augusto Akio é bronze! ",
+    description: `É o japonês mais brasileiro que você respeita!
+          \n Augusto Akio conquistou a medalha de bronze no skate park em #Paris2024! 
+          \n Foram so flips e so tricks que garantiram a medalha para o Brasil 🛹`,
+    socialMedia: "augakio",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 0,
+      },
+      {
+        name: "Prata",
+        quantity: 0,
+      },
+      {
+        name: "Bronze",
+        quantity: 1,
+      },
+    ],
+  },
+  {
+    name: "Edival Pontes",
+    images: [
+      "/assets/images/brazilians/edival/primary.jpg",
+      "/assets/images/brazilians/edival/secondary.jpg",
+      "/assets/images/brazilians/edival/tertiary.jpg",
+      "/assets/images/brazilians/edival/quartenary.jpg",
+      "/assets/images/brazilians/edival/quinary.jpg",
+      "/assets/images/brazilians/edival/sextary.jpg",
+    ],
+    title: "Edival Pontes é bronze! ",
+    description: `Edival Pontes é bronze! 
+          \n O brasileiro conquistou a medalha de bronze no taekwondo em #Paris2024! 
+          \n Foi muito no soco e no chute que garantiram a medalha para o Brasil!`,
+    socialMedia: "netinhomarquestkd",
+    medals: [
+      {
+        name: "Ouro",
+        quantity: 0,
+      },
+      {
+        name: "Prata",
+        quantity: 0,
+      },
+      {
+        name: "Bronze",
+        quantity: 1,
       },
     ],
   },
